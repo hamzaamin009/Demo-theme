@@ -11,8 +11,8 @@ export const DashboardRoutes: Routes = [
         path: 'dashboard1',
         component: Dashboard1Component,
         data: {
-          title: '',
-          urls: [{ title: 'Dashboard', url: '/dashboard' }, { title: '' }]
+          title: 'Dashboard',
+          urls: [{ title: 'Dashboard', url: '/dashboard' }, { title: 'Dashboard' }]
         }
       }
     ]
