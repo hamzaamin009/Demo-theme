@@ -1,12 +1,16 @@
-.ct-series-c .ct-slice-donut {
-  stroke: rgb(236, 239, 241);
+.counter-numbers {
+  font-size: 25px;
 }
-.ct-series-d .ct-slice-donut {
-  stroke: rgb(116, 90, 242);
+.fw-normal {
+  font-size: 18px;
 }
-.ct-series-b .ct-slice-donut {
-  stroke: rgb(38, 198, 218);
+ .mdi-account-multiple , .mdi-cart-plus ,
+ .mdi-currency-usd , .mdi-pulse {
+  font-size: 20px;
+  background: #7460ee1c;
+  padding: 8px;
 }
-.ct-series-a .ct-slice-donut {
-  stroke: rgb(30, 136, 229);
+
+.chart-content-bg {
+  background-color: #f6f7fb;  
 }
