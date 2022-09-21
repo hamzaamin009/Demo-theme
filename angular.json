@@ -13,7 +13,6 @@
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
-            "aot": true,
             "allowedCommonJsDependencies": [
               "c3",
               "rxjs",
@@ -49,7 +48,13 @@
               "node_modules/quill/dist/quill.bubble.css",
               "src/assets/scss/style.scss"
             ],
-            "scripts": []
+            "scripts": [],
+            "vendorChunk": true,
+            "extractLicenses": false,
+            "buildOptimizer": false,
+            "sourceMap": true,
+            "optimization": false,
+            "namedChunks": true
           },
           "configurations": {
             "production": {
@@ -59,9 +64,7 @@
                   "with": "src/environments/environment.prod.ts"
                 }
               ],
-              "optimization": false,
               "outputHashing": "all",
-              "aot": true,
               "sourceMap": false,
               "extractCss": true,
               "namedChunks": false,
@@ -69,7 +72,8 @@
               "vendorChunk": false,
               "buildOptimizer": true
             }
-          }
+          },
+          "defaultConfiguration": ""
         },
         "serve": {
           "builder": "@angular-devkit/build-angular:dev-server",
