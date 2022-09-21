@@ -104,7 +104,7 @@
                     <div class="drop-title bg-info text-white">Notifications</div>
                 </li>
                 <li>
-                    <div class="message-center notifications" [perfectScrollbar]="config">
+                    <div class="message-center notifications" >
                         <!-- Message -->
                         <a href="javascript:void(0)" class="message-item" *ngFor="let notification of notifications">
                             <span class="btn btn-circle {{notification.btn}}">
@@ -145,7 +145,7 @@
                     <div class="drop-title bg-info text-white">Messages</div>
                 </li>
                 <li>
-                    <div class="message-center message-body" [perfectScrollbar]="config">
+                    <div class="message-center message-body" >
                         <!-- Message -->
                         <a href="javascript:void(0)" class="message-item" *ngFor="let mymessage of mymessages">
                             <span class="user-img">

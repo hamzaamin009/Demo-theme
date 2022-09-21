@@ -13,26 +13,8 @@ export const Approutes: Routes = [
 			{
 				path: 'dashboard',
 				loadChildren: () => import('./dashboards/dashboard.module').then(m => m.DashboardModule)
-			},
-			
-		
-			{ path: 'icons', loadChildren: () => import('./icons/icons.module').then(m => m.IconsModule) },
-			
-		]
-	},
-	{
-		path: '',
-		component: BlankComponent,
-		children: [
-			{
-				path: 'authentication',
-				loadChildren:
-					() => import('./authentication/authentication.module').then(m => m.AuthenticationModule)
 			}
-		]
-	},
-	{
-		path: '**',
-		redirectTo: '/authentication/404'
+				]
 	}
+
 ];

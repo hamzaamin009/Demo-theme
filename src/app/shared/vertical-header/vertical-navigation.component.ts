@@ -1,12 +1,8 @@
 import { Component, AfterViewInit, EventEmitter, Output } from '@angular/core';
 import {
-  NgbModal,
-  ModalDismissReasons,
-  NgbPanelChangeEvent,
-  NgbCarouselConfig
+  NgbModal
 } from '@ng-bootstrap/ng-bootstrap';
-import { PerfectScrollbarConfigInterface } from 'ngx-perfect-scrollbar';
-import { TranslateService } from '@ngx-translate/core';
+
 declare var $: any;
 
 @Component({
@@ -15,8 +11,6 @@ declare var $: any;
 })
 export class VerticalNavigationComponent implements AfterViewInit {
   @Output() toggleSidebar = new EventEmitter<void>();
-
-  public config: PerfectScrollbarConfigInterface = {};
 
   public showSearch = false;
 
@@ -115,14 +109,11 @@ export class VerticalNavigationComponent implements AfterViewInit {
 
 
 
-  constructor(private modalService: NgbModal, private translate: TranslateService) {
-    translate.setDefaultLang('en');
+  constructor(private modalService: NgbModal) {
+   
   }
 
-  changeLanguage(lang: any) {
-    this.translate.use(lang.code)
-    this.selectedLanguage = lang;
-  }
+ 
 
   ngAfterViewInit() { }
 }

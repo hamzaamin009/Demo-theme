@@ -1,7 +1,6 @@
 import { Component, AfterViewInit, EventEmitter, Output } from '@angular/core';
-import { NgbModal, ModalDismissReasons, NgbPanelChangeEvent, NgbCarouselConfig } from '@ng-bootstrap/ng-bootstrap';
-import { PerfectScrollbarConfigInterface } from 'ngx-perfect-scrollbar';
-import { TranslateService } from '@ngx-translate/core';
+import { NgbModal } from '@ng-bootstrap/ng-bootstrap';
+
 
 declare var $: any;
 
@@ -12,7 +11,6 @@ declare var $: any;
 export class HorizontalNavigationComponent implements AfterViewInit {
   @Output() toggleSidebar = new EventEmitter<void>();
 
-  public config: PerfectScrollbarConfigInterface = {};
 
   public showSearch = false;
 
@@ -112,16 +110,12 @@ export class HorizontalNavigationComponent implements AfterViewInit {
     icon: 'de'
   }]
 
-  constructor(private modalService: NgbModal, private translate: TranslateService) {
+  constructor(private modalService: NgbModal) {
 
-    translate.setDefaultLang('en');
+
 
   }
 
   ngAfterViewInit() { }
 
-  changeLanguage(lang: any) {
-    this.translate.use(lang.code)
-    this.selectedLanguage = lang;
-  }
 }
