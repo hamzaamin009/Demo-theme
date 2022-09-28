@@ -125,7 +125,6 @@
       }
     }
   },
-  "defaultProject": "adminpro-angular",
   "cli": {
     "analytics": "0ea9bf2f-7ae0-469e-a86d-3d591cf4ae41"
   }
