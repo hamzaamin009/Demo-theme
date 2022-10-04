@@ -17,6 +17,8 @@ import { VerticalSidebarComponent } from './shared/vertical-sidebar/vertical-sid
 import { BreadcrumbComponent } from './shared/breadcrumb/breadcrumb.component';
 import { HorizontalNavigationComponent } from './shared/horizontal-header/horizontal-navigation.component';
 import { HorizontalSidebarComponent } from './shared/horizontal-sidebar/horizontal-sidebar.component';
+import { TranslateLoader, TranslateModule } from '@ngx-translate/core';
+
 
 import { Approutes } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -49,6 +51,13 @@ export function HttpLoaderFactory(http: HttpClient) {
     RouterModule.forRoot(Approutes),
     AgmCoreModule.forRoot({ apiKey: 'AIzaSyDoliAneRffQDyA7Ul9cDk3tLe7vaU4yP8' }),
     HttpClientModule,
+    TranslateModule.forRoot({
+      loader: {
+        provide: TranslateLoader,
+        useFactory: HttpLoaderFactory,
+        deps: [HttpClient]
+      }
+    })
 
   ],
   providers: [
